@@ -7,3 +7,5 @@ This is where all of my guides, and assignments will be posted.
 ## Branches
 
 - master: This is the first branch, and it's usage will be determined later.
+- guide-01: Guide 01 Introduction to Git
+    - guide-02: Guide 02 Introduction to Node.js and NPM
