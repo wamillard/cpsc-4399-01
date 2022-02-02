@@ -1,0 +1,17 @@
+{
+  "name": "git-test",
+  "version": "1.0.0",
+  "description": "Guide-02 Into to NPM and Node.js",
+  "main": "index.html",
+  "scripts": {
+    "start": "npm run lite",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lite": "lite-server"
+  },
+  "author": "Wil Millard",
+  "license": "ISC",
+  "homepage": "https://github.com/wamillard/cpsc-4399-01/tree/guide-02",
+  "devDependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
