@@ -33,7 +33,7 @@
 						</li>
 					</ul>
 					<span class="navbar-text">
-						<a data-toggle="modal" data-target="#loginModal">
+						<a data-toggle="modal" data-target="#loginModal" role="button" class="btn">
 							<span class="fa fa-sign-in"></span> Login
 						</a>
 					</span>
@@ -45,7 +45,7 @@
 		</nav>
 		
 		<div id="loginModal" class="modal fade" role="dialog">
-			<div class="modal-dialog modal-lg" role="content">
+			<div class="modal-dialog modal-lg" role="document">
 				<!-- Modal content -->
 				<div class="modal-content">
 					<div class="modal-header">
@@ -96,14 +96,89 @@
 						<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
 					</div>
 					<div class="col-12 col-sm-3 align-self-center">
-						<a class="btn btn-warning btn-block nav-link" href="#tableres" role="button"
-								data-toggle="tooltip" data-html="true"
-								title="Or Call us at <br><strong>+852 12345678</strong>" data-placement="bottom">Reserve
-							Table</a>
+						<button id="tableres" class="btn btn-warning text-white" type="button" data-toggle="modal"
+								data-target="#tableresModal" role="button">Reserve Table
+						</button>
 					</div>
 				</div>
 			</div>
 		</header>
+		
+		<div id="tableresModal" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Reserve a Table</h3>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<form>
+							<div class="form-group row">
+								<h6 class="col-12 col-sm-3 col-form-label">Number of Guests</h6>
+								<div class="col-12 col-sm">
+									<div class="form-check form-check-inline">
+										<input type="radio" class="form-check-input" name="guestoptions" id="guest1"
+												value="1">
+										<label class="form-check-label" for="guest1">1</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input type="radio" class="form-check-input" name="guestoptions" id="guest2"
+												value="2">
+										<label class="form-check-label" for="guest2">2</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input type="radio" class="form-check-input" name="guestoptions" id="guest3"
+												value="3">
+										<label class="form-check-label" for="guest3">3</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input type="radio" class="form-check-input" name="guestoptions" id="guest4"
+												value="4">
+										<label class="form-check-label" for="guest4">4</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input type="radio" class="form-check-input" name="guestoptions" id="guest5"
+												value="5">
+										<label class="form-check-label" for="guest5">5</label>
+									</div>
+									<div class="form-check form-check-inline">
+										<input type="radio" class="form-check-input" name="guestoptions" id="guest6"
+												value="6">
+										<label class="form-check-label" for="guest6">6</label>
+									</div>
+								</div>
+							</div>
+							<div class="form-group row">
+								<h6 class="col-12 col-sm-3 col-form-label">Section</h6>
+								<div class="col-12 col-sm">
+									<div class="btn-group" role="group" aria-label="Section Buttons">
+										<button type="button" class="btn btn-success">Non-Smoking</button>
+										<button type="button" class="btn btn-danger">Smoking</button>
+									</div>
+								</div>
+							</div>
+							<div class="form-group row">
+								<h6 class="col-12 col-sm-3 col-form-label">Date and Time</h6>
+								<div class="col-12 col-sm-5 no-gutters">
+									<input type="date" class="form-control" id="resdate" name="resdate"
+											placeholder="=Date">
+								</div>
+								<div class="col-12 col-sm-4 no-gutters">
+									<input type="time" class="form-control" id="restime" name="restime"
+											placeholder="Time">
+								</div>
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer justify-content-start offset-sm-3">
+						<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Reserve</button>
+					</div>
+				</div>
+			</div>
+		</div>
 		
 		<div class="container">
 			<div class="row row-content">
@@ -208,68 +283,6 @@
 				</div>
 			</div>
 			
-			<div class="row row-content justify-content-center">
-				<div class="col-12 col-sm-8">
-					<div class="card" id="tableres">
-						<h3 class="card-header bg-warning text-white">Reserve a Table</h3>
-						<div class="card-body bg-light">
-							<form>
-								<div class="form-group row">
-									<h6 class="col-12 col-sm-3 col-form-label">Number of Guests</h6>
-									<div class="col-12 col-sm">
-										<div class="form-check form-check-inline">
-											<input type="radio" class="form-check-input" name="guestoptions" id="guest1"
-													value="1">
-											<label class="form-check-label" for="guest1">1</label>
-										</div>
-										<div class="form-check form-check-inline">
-											<input type="radio" class="form-check-input" name="guestoptions" id="guest2"
-													value="2">
-											<label class="form-check-label" for="guest2">2</label>
-										</div>
-										<div class="form-check form-check-inline">
-											<input type="radio" class="form-check-input" name="guestoptions" id="guest3"
-													value="3">
-											<label class="form-check-label" for="guest3">3</label>
-										</div>
-										<div class="form-check form-check-inline">
-											<input type="radio" class="form-check-input" name="guestoptions" id="guest4"
-													value="4">
-											<label class="form-check-label" for="guest4">4</label>
-										</div>
-										<div class="form-check form-check-inline">
-											<input type="radio" class="form-check-input" name="guestoptions" id="guest5"
-													value="5">
-											<label class="form-check-label" for="guest5">5</label>
-										</div>
-										<div class="form-check form-check-inline">
-											<input type="radio" class="form-check-input" name="guestoptions" id="guest6"
-													value="6">
-											<label class="form-check-label" for="guest6">6</label>
-										</div>
-									</div>
-								</div>
-								<div class="form-group row">
-									<h6 class="col-12 col-sm-3 col-form-label">Date and Time</h6>
-									<div class="col-12 col-sm-4">
-										<input type="date" class="form-control" id="resdate" name="resdate"
-												placeholder="=Date">
-									</div>
-									<div class="col-12 col-sm-4">
-										<input type="time" class="form-control" id="restime" name="restime"
-												placeholder="Time">
-									</div>
-								</div>
-								<div class="form-group row">
-									<div class="col-sm-8 offset-sm-3">
-										<button type="submit" class="btn btn-primary">Reserve</button>
-									</div>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 		
 		<footer class="footer">
@@ -327,9 +340,9 @@
 		<script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 		<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script>
-			$(document).ready(function ()
+			$('#tableresModal').on('shown.bs.modal', function ()
 			{
-				$('[data-toggle="tooltip"]').tooltip();
+				$('#tableres').trigger('focus');
 			})
 		</script>
 	</body>
