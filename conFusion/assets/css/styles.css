@@ -29,6 +29,11 @@ body{
 	
 }
 
+.tab-content{
+	border:1px solid #ddd;
+	padding: 10px;
+}
+
 .footer
 {
 	background-color: #D1C4E9;
