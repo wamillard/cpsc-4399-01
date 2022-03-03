@@ -25,3 +25,4 @@ This is where all of my guides, and assignments will be posted.
 - guide-14: Guide 14 Tooltips and Modals
 - guide-15: Guide 15 Carousel
 - assignment-03: Assignment 3 - Bootstrap Components
+- guide-16: Guide 16 Bootstrap and JQuery
