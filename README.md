@@ -26,5 +26,6 @@ This is where all of my guides, and assignments will be posted.
 - guide-15: Guide 15 Carousel
 - assignment-03: Assignment 3 - Bootstrap Components
 - guide-16: Guide 16 Bootstrap and JQuery
-  - - guide-17: Guide 17 Less
+    - - guide-17: Guide 17 Less
 - guide-18: Guide 18 Scss
+- guide-19: Guide 19 NPM Scripts, Part 1
