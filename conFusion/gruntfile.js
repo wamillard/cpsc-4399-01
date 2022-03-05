@@ -8,7 +8,9 @@ module.exports = function (grunt)
 	require('time-grunt')(grunt);
 	
 	// Automatically load required Grunt tasks
-	require('jit-grunt')(grunt);
+	require('jit-grunt')(grunt, {
+		useminPrepare: 'grunt-usemin'
+	});
 	
 	//Define the configuration for all the tasks
 	grunt.initConfig({
@@ -19,6 +21,132 @@ module.exports = function (grunt)
 			dist: {
 				files: {
 					'assets/css/styles.css': 'assets/css/styles.scss'
+				}
+			}
+		},
+		copy: {
+			html: {
+				files: [
+					{
+						//for html
+						expand: true,
+						dot: true,
+						cwd: './',
+						src: ['*html'],
+						dest: 'dist'
+					}
+				]
+			},
+			fonts: {
+				files: [
+					{
+						//for font-awesome
+						expand: true,
+						dot: true,
+						cwd: 'node_modules/font_awesome',
+						src: ['fonts/*.*'],
+						dest: 'dist'
+					}
+				]
+			}
+		},
+		clean: {
+			build: {
+				src: ['dist/']
+			}
+		},
+		imagemin: {
+			dynamic: {
+				files: [{
+					expand: true,                            // Enable dynamic expansion
+					cwd: './',                               // Src matches are relative to this path
+					src: ['assets/img/*.{png,jpg,gid}'],    // Actual patterns to match
+					dest: 'dist/assets/img/'
+				}]
+			}
+			
+		},
+		useminPrepare: {
+			prep: {
+				dest: 'dist',
+				src: ['contactus.html', 'aboutus.html', 'index.html']
+			},
+			options: {
+				flow: {
+					steps: {
+						css: ['cssmin'],
+						js: ['uglify']
+					},
+					post: {
+						css: [{
+							name: 'cssmin',
+							createConfig: function (context, block)
+							{
+								var generated = context.options.generated;
+								generated.options = {
+									keepSpecialComments: 0,
+									rebase: false
+								};
+							}
+						}]
+					}
+				}
+			}
+		},
+		// Concat
+		concat: {
+			options: {
+				seperator: ';'
+			},
+			
+			//dist configuration is provided by useminPrepare
+			dist: {}
+		},
+		// Uglify
+		uglify: {
+			// dist configuration is provided by useminPrepare
+			dist: {}
+		},
+		cssmin: {
+			dist: {}
+		},
+		// Filerev
+		filerev: {
+			options: {
+				encoding: 'utf8',
+				algorithm: 'md5',
+				length: 20
+			},
+			releas: {
+				// filerev:release hashes (md5) all assets (images, js, and css)
+				// in dist directory
+				files: [{
+					src: [
+						'dist/assets/js/*.js',
+						'dist/assets/css/*.css'
+					]
+				}]
+			}
+		},
+		// Usemin
+		// Replaces all assets with their revved version in thml and css files.
+		// options.asstDirs contains the directories for finding the assets
+		// according to their relative paths
+		usemin: {
+			html: ['dist/contactus.html', 'dist/aboutus.html', 'dist/index.html'],
+			options: {
+				assetsDirs: ['dist', 'dist/assets/css', 'dist/assets/js']
+			}
+		},
+		htmlmin: {                                                   // Task
+			dist: {                                                 // Target
+				options: {                                           // Target options
+					collapseWhitespace: true
+				},
+				files: {                                             // Dictionary of files
+					'dist/index.html': 'dist/index.html',            // 'destination':'source'
+					'dist/contactus.html': 'dist/contactus.html',
+					'dist/aboutus.html': 'dist/aboutus.html'
 				}
 			}
 		},
@@ -47,4 +175,16 @@ module.exports = function (grunt)
 	
 	grunt.registerTask('css', ['sass']);
 	grunt.registerTask('default', ['browserSync', 'watch']);
+	grunt.registerTask('build', [
+		'clean',
+		'copy',
+		'imagemin',
+		'useminPrepare',
+		'concat',
+		'cssmin',
+		'uglify',
+		'filerev',
+		'usemin',
+		'htmlmin'
+	])
 };

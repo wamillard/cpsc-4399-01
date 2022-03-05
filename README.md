@@ -31,3 +31,4 @@ This is where all of my guides, and assignments will be posted.
 - guide-19: Guide 19 NPM Scripts, Part 1
 - guide-20: Guide 20 NPM Scripts, Part 2
     - - guide-21: Guide 21 Grunt, Part 1
+    - - guide-22: Guide 22 Grunt, Part 2
