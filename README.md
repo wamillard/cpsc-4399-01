@@ -34,3 +34,4 @@ This is where all of my guides, and assignments will be posted.
     - - guide-22: Guide 22 Grunt, Part 2
     - 
     - - guide-23: Guide 23 Gulp, Part 1
+    - - guide-24: Guide 24 Gulp, Part 2
