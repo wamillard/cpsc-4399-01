@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	
+	<!--  -->
+	
 	<head>
 		<!--Required meta tags always come first -->
 		<meta charset="utf-8">
@@ -19,6 +21,7 @@
 	</head>
 	
 	<body>
+		<!-- Navbar -->
 		<nav class="navbar navbar-dark navbar-expand-sm fixed-top">
 			<div class="container">
 				<a class="navbar-brand" href="#"><img src="assets/img/logo.png" height="30" width="41" alt="logo"></a>
@@ -35,7 +38,7 @@
 						</li>
 					</ul>
 					<span class="navbar-text">
-						<a data-toggle="modal" data-target="#loginModal" role="button" class="btn">
+						<a id="loginButton" role="button" class="btn">
 							<span class="fa fa-sign-in"></span> Login
 						</a>
 					</span>
@@ -46,6 +49,7 @@
 			</button>
 		</nav>
 		
+		<!-- Login Modal -->
 		<div id="loginModal" class="modal fade" role="dialog">
 			<div class="modal-dialog modal-lg" role="document">
 				<!-- Modal content -->
@@ -58,14 +62,14 @@
 						<form>
 							<div class="form-row">
 								<div class="form-group col-sm-4">
-									<label class="sr-only" for="examlpeInputEmail3">Email</label>
+									<label class="sr-only" for="examlpeInputEmail">Email</label>
 									<input type="email" class="form-control form-control-sm mr-1"
-											id="examlpeInputEmail3" placeholder="Enter email">
+											id="examlpeInputEmail" placeholder="Enter email">
 								</div>
 								<div class="form group col-sm-4">
-									<label class="sr-only" for="exampleInputPassword3">Password</label>
+									<label class="sr-only" for="exampleInputPassword">Password</label>
 									<input type="password" class="form-control form-control-sm mr-1"
-											id="exampleInputPassword3" placeholder="Password">
+											id="exampleInputPassword" placeholder="Password">
 								</div>
 								<div class="col-sm-auto">
 									<div class="form-check">
@@ -86,6 +90,7 @@
 			</div>
 		</div>
 		
+		<!-- Jumbotron -->
 		<header class="jumbotron">
 			<div class="container">
 				<div class="row row-header">
@@ -98,14 +103,15 @@
 						<img src="assets/img/logo.png" class="img-fluid" alt="Logo">
 					</div>
 					<div class="col-12 col-sm-3 align-self-center">
-						<button id="tableres" class="btn btn-warning text-white" type="button" data-toggle="modal"
-								data-target="#tableresModal" role="button">Reserve Table
+						<button id="tableresButton" class="btn btn-warning text-white" type="button" role="button">
+							Reserve Table
 						</button>
 					</div>
 				</div>
 			</div>
 		</header>
 		
+		<!-- Table Reservation Modal -->
 		<div id="tableresModal" class="modal fade" role="dialog">
 			<div class="modal-dialog modal-lg" role="document">
 				<div class="modal-content">
@@ -182,8 +188,11 @@
 			</div>
 		</div>
 		
+		<!-- Main Content -->
 		<div class="container">
 			<div class="row row-content">
+				
+				<!-- Carousel -->
 				<div class="col">
 					<div id="mycarousel" class="carousel slide" data-ride="carousel">
 						<div class="carousel-inner" role="listbox">
@@ -218,14 +227,9 @@
 							<a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
 								<span class="carousel-control-next-icon"></span>
 							</a>
-							<div class="btn-group" id="carouselButton">
-								<button class="btn btn-danger btn-sm" id="carousel-pause">
-									<span class="fa fa-pause"></span>
-								</button>
-								<button class="btn btn-danger btn-sm" id="carousel-play">
-									<span class="fa fa-play"></span>
-								</button>
-							</div>
+							<button class="btn btn-danger btn-sm" id="carouselButton">
+								<span id="carousel-button-icon" class="fa fa-pause"></span>
+							</button>
 						</div>
 					</div>
 				</div>

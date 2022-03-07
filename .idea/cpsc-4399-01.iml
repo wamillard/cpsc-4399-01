@@ -7,6 +7,8 @@
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/conFusion/dist/assets/css" />
       <excludeFolder url="file://$MODULE_DIR$/conFusion/dist/assets/js" />
+      <excludeFolder url="file://$MODULE_DIR$/conFusion/dist" />
+      <excludeFolder url="file://$MODULE_DIR$/npm-reinstall-info" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

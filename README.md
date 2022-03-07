@@ -30,3 +30,9 @@ This is where all of my guides, and assignments will be posted.
 - guide-18: Guide 18 Scss
 - guide-19: Guide 19 NPM Scripts, Part 1
 - guide-20: Guide 20 NPM Scripts, Part 2
+    - - guide-21: Guide 21 Grunt, Part 1
+    - - guide-22: Guide 22 Grunt, Part 2
+    - 
+    - - guide-23: Guide 23 Gulp, Part 1
+    - - guide-24: Guide 24 Gulp, Part 2
+- assignment-04: Assignment 4 - Bootstrap components + SCSS

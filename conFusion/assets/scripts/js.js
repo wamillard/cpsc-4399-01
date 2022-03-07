@@ -1,17 +1,34 @@
 $(document).ready(function ()
 {
 	$("#mycarousel").carousel({interval: 2000});
-	$("#carousel-pause").click(function ()
+	$("#carouselButton").click(function ()
 	{
-		$("#mycarousel").carousel('pause');
+		if ($("#carouselButton").children("span").hasClass('fa-pause'))
+		{
+			$("#mycarousel").carousel('pause');
+			$("#carouselButton").children("span").removeClass('fa-pause');
+			$("#carouselButton").children("span").addClass('fa-play');
+		}
+		else if ($("#carouselButton").children("span").hasClass('fa-play'))
+		{
+			$("#mycarousel").carousel('cycle');
+			$("#carouselButton").children("span").removeClass('fa-play');
+			$("#carouselButton").children("span").addClass('fa-pause');
+		}
 	});
-	$("#carousel-play").click(function ()
+	
+	$("#tableresButton").click(function ()
 	{
-		$("#mycarousel").carousel('cycle');
+		$('#tableresModal').modal('show');
+	});
+	
+	$("#loginButton").click(function ()
+	{
+		$('#loginModal').modal('show');
 	});
 });
 
-$('#tableresModal').on('shown.bs.modal', function ()
+$("#loginModal").on('shown.bs.modal', function ()
 {
-	$('#tableres').trigger('focus');
-})
+	$('#examlpeInputEmail').focus();
+});
