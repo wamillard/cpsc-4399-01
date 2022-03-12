@@ -1,39 +1,38 @@
 {
-	"name"            : "confusion",
-	"author"          : "W. Millard",
-	"license"         : "ISC",
-	"version"         : "1.0.0",
-	"description"     : "This is a website for Ristorante Con Fusion",
-	"main"            : "index.html",
-	"scripts"         : {
-		"start"      : "npm run watch:all",
-		"test"       : "echo \"Error: no test specified\" && exit 1",
-		"lite"       : "lite-server",
-		"scss"       : "node-sass -o assets/css/ assets/css/",
-		"watch:scss" : "onchange \"assets/css/*.scss\" -- npm run scss",
-		"watch:all"  : "parallelshell \"npm run watch:scss\" \"npm run lite\"",
-		"clean"      : "rimraf dist",
-		"copyfonts"  : "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
-		"imagemin"   : "imagemin assets/img/* --out-dir=\"dist/assets/img\"",
-		"usemin"     : "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
-		"build"      : "npm run clean && npm run imagemin && npm run copyfonts && npm run usemin"
+	"name"         : "confusion",
+	"version"      : "0.1.0",
+	"private"      : true,
+	"dependencies" : {
+		"@testing-library/jest-dom"   : "^5.14.1",
+		"@testing-library/react"      : "^12.0.0",
+		"@testing-library/user-event" : "^13.2.1",
+		"react"                       : "^17.0.2",
+		"react-dom"                   : "^17.0.2",
+		"react-scripts"               : "5.0.0",
+		"web-vitals"                  : "^2.1.0"
 	},
-	"dependencies"    : {
-		"bootstrap"        : "^4.0.0",
-		"bootstrap-social" : "^5.1.1",
-		"font-awesome"     : "^4.7.0",
-		"jquery"           : "^3.3.1",
-		"lite-server"      : "^2.6.1",
-		"popper.js"        : "^1.12.9"
+	"scripts"      : {
+		"start" : "react-scripts start",
+		"build" : "react-scripts build",
+		"test"  : "react-scripts test",
+		"eject" : "react-scripts eject"
 	},
-	"devDependencies" : {
-		"cssmin"        : "^0.4.3",
-		"htmlmin"       : "^0.0.7",
-		"node-sass"     : "^7.0.1",
-		"onchange"      : "^3.3.0",
-		"parallelshell" : "^3.0.2",
-		"rimraf"        : "^2.6.2",
-		"uglifyjs"      : "^2.4.11",
-		"usemin-cli"    : "^0.5.1"
+	"eslintConfig" : {
+		"extends" : [
+			"react-app",
+			"react-app/jest"
+		]
+	},
+	"browserslist" : {
+		"production"  : [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development" : [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
 	}
 }
