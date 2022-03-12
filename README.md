@@ -37,3 +37,4 @@ This is where all of my guides, and assignments will be posted.
     - - guide-24: Guide 24 Gulp, Part 2
 - assignment-04: Assignment 4 - Bootstrap components + SCSS
 - guide-25: Guide 25 Getting Started with React
+- guide-26: Guide 26 Configuring your React Application
