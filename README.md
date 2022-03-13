@@ -41,3 +41,4 @@ This is where all of my guides, and assignments will be posted.
 - guide-27: Guide 27 React Components, Part 1
 - guide-28: Guide 28 React Components, Part 2
 - assignment-05: Assignment 5 - Introduction to React
+- guide-29: Guide 29 Presentational and Container Components
