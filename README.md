@@ -39,3 +39,4 @@ This is where all of my guides, and assignments will be posted.
 - guide-25: Guide 25 Getting Started with React
 - guide-26: Guide 26 Configuring your React Application
 - guide-27: Guide 27 React Components, Part 1
+- guide-28: Guide 28 React Components, Part 2
