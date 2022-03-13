@@ -31,7 +31,6 @@ class Main extends Component
 					</div>
 				</Navbar>
 				<Menu dishes={this.state.dishes} onClick={(dishId) => this.onDishSelect( dishId )}/>
-				{/*{this.state.selectedDish.toString()}*/}
 				
 				<DishDetail dish={this.state.dishes.filter( (dish) => dish.id === this.state.selectedDish )[0]}/>
 			
