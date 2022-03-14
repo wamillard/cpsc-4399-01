@@ -43,3 +43,4 @@ This is where all of my guides, and assignments will be posted.
 - assignment-05: Assignment 5 - Introduction to React
 - guide-29: Guide 29 Presentational and Container Components
 - guide-30: Guide 30 Functional Components
+- guide-31: Guide 31 Header and Footer
