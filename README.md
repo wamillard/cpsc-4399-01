@@ -44,3 +44,4 @@ This is where all of my guides, and assignments will be posted.
 - guide-29: Guide 29 Presentational and Container Components
 - guide-30: Guide 30 Functional Components
 - guide-31: Guide 31 Header and Footer
+- guide-32: Guide 32 React Router
